@@ -172,8 +172,9 @@
     var rParams = FAPI.Util.getRequestParameters();
     FAPI.init(rParams.api_server, rParams.apiconnection,
       function() {
-        var geo_location = rParams.ip_geo_location.split(",");
-        var language = geo_location[0];
+        //var geo_location = rParams.ip_geo_location.split(",");
+        //var language = geo_location[0];
+        var language = "ru";
         unityInstance.SendMessage('PlayerManager', 'GetPlayerLanguage', language);
         unityInstance.SendMessage('PlayerManager', 'GetPlayerName', rParams.user_name);
         unityInstance.SendMessage('PlayerManager', 'PlayerAuthorized');
